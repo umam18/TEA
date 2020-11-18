@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'custom_dropdown.dart' as custom;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tea/main.dart';
+import 'Login_Screen.dart';
 
 class TimePage extends StatefulWidget {
   @override
@@ -24,21 +25,27 @@ class _State extends State<TimePage> {
   ];
   List _filter = ["Job Number", "Labor Type", "Date", "etc."];
 
-  // int _currentIndex = 0;
-  // final List<Widget> myFooter = [TimePage(), ExpensePage()];
-
-  // void onTappedBar(int index) {
-  //   setState(() {
-  //     _currentIndex = index;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 5.0,
         title: Text('Main Menu'),
         leading: new Container(),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              IconData(0xe848, fontFamily: 'MaterialIcons'),
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              );
+            },
+          )
+        ],
         centerTitle: true,
       ),
       body: Column(

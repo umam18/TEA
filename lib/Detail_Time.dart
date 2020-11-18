@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:tea/main.dart';
+import 'Time_Management.dart';
+import 'Login_Screen.dart';
 
 class DetailTimePage extends StatefulWidget {
   @override
@@ -14,8 +15,38 @@ class _State extends State<DetailTimePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Detail Time'),
-          centerTitle: true,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                IconData(0xe848, fontFamily: 'MaterialIcons'),
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+            )
+          ],
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TimePage()),
+                  );
+                },
+                icon: const Icon(Icons.chevron_left, size: 32.0),
+              ),
+              Text("Detail Time Management"),
+            ],
+          ),
+          titleSpacing: 0.0,
+          automaticallyImplyLeading: false,
         ),
         body: Center(
           child: Column(
