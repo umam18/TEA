@@ -47,6 +47,7 @@ class _State extends State<TimePage> {
         children: <Widget>[
           Container(
               alignment: Alignment.center,
+              //color: const Color(0x3FC1C9),
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: Text(
                 'Time Management',

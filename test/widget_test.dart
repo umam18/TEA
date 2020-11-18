@@ -17,6 +17,7 @@ void main() {
     await tester.pumpWidget(MenuExpense());
     await tester.pumpWidget(MenuTime());
     await tester.pumpWidget(MenuDetailTime());
+    await tester.pumpWidget(MenuDetailExpense());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

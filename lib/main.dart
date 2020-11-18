@@ -3,6 +3,7 @@ import 'Login_Screen.dart';
 import 'Expense_Management.dart';
 import 'Time_Management.dart';
 import 'Detail_Time.dart';
+import 'Detail_Expense.dart';
 
 void main() => runApp(Login());
 
@@ -35,6 +36,15 @@ class MenuDetailTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(primarySwatch: Colors.blue), home: DetailTimePage());
+  }
+}
+
+class MenuDetailExpense extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: DetailExpensePage());
   }
 }
 
