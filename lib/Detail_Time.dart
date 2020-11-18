@@ -141,7 +141,7 @@ class _State extends State<DetailTimePage> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text("Javier Hernandez",
+                                  Text("Javier Hernandez2",
                                       style: new TextStyle(
                                           fontSize: 20.0, color: Colors.brown)),
                                   Text("1st Approval",
