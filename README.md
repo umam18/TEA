@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+Last Update:
+- Responsive page masih sebatas bisa ScorllView kecuali Login Page
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
