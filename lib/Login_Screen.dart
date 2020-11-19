@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tea/main.dart';
+import 'package:tea/layout.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class _State extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
         appBar: AppBar(
           title: Text('Login Page'),
@@ -23,20 +25,22 @@ class _State extends State<LoginPage> {
           children: <Widget>[
             Container(
                 alignment: Alignment.center,
-                //padding: EdgeInsets.all(10),
+                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                 child: Image(
                   image: AssetImage('assets/Approval.png'),
-                  height: 100,
+                  height: SizeConfig.blockVertical * 30,
                 )),
             Container(
                 alignment: Alignment.center,
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
                 child: Text(
                   'Time & Expense Approval',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: SizeConfig.blockHorizontal * 10),
                 )),
             Container(
-              width: 300,
+              width: SizeConfig.blockHorizontal * 160,
               padding: EdgeInsets.all(10),
               child: TextField(
                 style: new TextStyle(
@@ -50,7 +54,7 @@ class _State extends State<LoginPage> {
               ),
             ),
             Container(
-              width: 300,
+              width: SizeConfig.blockHorizontal * 160,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
                 style: new TextStyle(
@@ -65,8 +69,8 @@ class _State extends State<LoginPage> {
               ),
             ),
             Container(
-                height: 60,
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                //height: SizeConfig.blockVertical * 15,
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 child: RaisedButton(
                   textColor: Colors.white,
                   color: Colors.blue,
