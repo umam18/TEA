@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Time_Management.dart';
+//import 'Time_Management.dart';
 import 'Login_Screen.dart';
 
 class DetailTimePage extends StatefulWidget {
@@ -35,10 +35,7 @@ class _State extends State<DetailTimePage> {
             children: <Widget>[
               IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => TimePage()),
-                  );
+                  Navigator.of(context, rootNavigator: true).pop(context);
                 },
                 icon: const Icon(Icons.chevron_left, size: 32.0),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Expense_Management.dart';
+//import 'Expense_Management.dart';
 import 'Login_Screen.dart';
 
 class DetailExpensePage extends StatefulWidget {
@@ -35,10 +35,7 @@ class _State extends State<DetailExpensePage> {
             children: <Widget>[
               IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ExpensePage()),
-                  );
+                  Navigator.of(context, rootNavigator: true).pop(context);
                 },
                 icon: const Icon(Icons.chevron_left, size: 32.0),
               ),
