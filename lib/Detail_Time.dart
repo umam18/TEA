@@ -53,20 +53,60 @@ class _State extends State<DetailTimePage> {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    width: 300,
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                    child: TextField(
-                      style: new TextStyle(
-                        fontSize: 18.0,
-                      ),
-                      obscureText: true,
-                      controller: passwordController,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Password',
-                      ),
-                    ),
-                  ),
+                      margin: EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 0.0),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20.0),
+                          boxShadow: [
+                            BoxShadow(blurRadius: 2.0, color: Colors.grey)
+                          ]),
+                      child: Container(
+                        padding: EdgeInsets.all(7.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'Time Mgt Title',
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey),
+                                )
+                              ],
+                            ),
+                            Divider(),
+                            Row(
+                              children: [
+                                Text('Column Name'),
+                                SizedBox(width: 5.0),
+                                Text(':'),
+                                SizedBox(width: 5.0),
+                                Text('Column Value'),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text('Column Name'),
+                                SizedBox(width: 5.0),
+                                Text(':'),
+                                SizedBox(width: 5.0),
+                                Text('Column Value'),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text('Column Name'),
+                                SizedBox(width: 5.0),
+                                Text(':'),
+                                SizedBox(width: 5.0),
+                                Text('Column Value'),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
