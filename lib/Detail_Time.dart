@@ -77,33 +77,24 @@ class _State extends State<DetailTimePage> {
                               ],
                             ),
                             Divider(),
-                            Row(
-                              children: [
-                                Text('Column Name'),
-                                SizedBox(width: 5.0),
-                                Text(':'),
-                                SizedBox(width: 5.0),
-                                Text('Column Value'),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text('Column Name'),
-                                SizedBox(width: 5.0),
-                                Text(':'),
-                                SizedBox(width: 5.0),
-                                Text('Column Value'),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text('Column Name'),
-                                SizedBox(width: 5.0),
-                                Text(':'),
-                                SizedBox(width: 5.0),
-                                Text('Column Value'),
-                              ],
-                            ),
+                            for (int i = 0; i < 6; i++)
+                              Row(
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.fromLTRB(
+                                        10.0, 5.0, 20.0, 5.0),
+                                    child: Row(
+                                      children: [
+                                        Text('Column Name ${i + 1}'),
+                                        SizedBox(width: 5.0),
+                                        Text(':'),
+                                        SizedBox(width: 5.0),
+                                        Text('Column Value ${i + 1}'),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                           ],
                         ),
                       )),

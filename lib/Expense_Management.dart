@@ -75,7 +75,7 @@ class _State extends State<ExpensePage> {
                     iconEnabledColor: Colors.blue,
                     isDense: false,
                     isExpanded: true,
-                    hint: Text("Select Employee"),
+                    hint: Text("Select Approver"),
                     value: _valEmployee,
                     items: _employee.map((value) {
                       return custom.DropdownMenuItem(
