@@ -94,7 +94,7 @@ class _State extends State<TimePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    margin: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(12.0),
                     width: 100,
                     height: 100,
                     child: Center(
